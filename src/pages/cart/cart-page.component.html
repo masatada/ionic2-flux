@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cart
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <cart-item
+    [products]="products"
+    [total]="total"
+    (checkoutClicked)="onCheckoutClicked($event)"
+  ></cart-item>
+</ion-content>

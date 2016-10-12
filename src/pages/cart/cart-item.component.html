@@ -1,0 +1,15 @@
+<ion-list>
+  <ion-list-header>
+    Your Cart
+  </ion-list-header>
+  <ion-item *ngIf="!hasProducts">Please add some products to cart.</ion-item>
+  <ion-item *ngFor="let p of products" key="p.id">
+    {{p.title}} - &euro;{{p.price}} x {{p.quantity}}
+  </ion-item>
+  <ion-item *ngIf="hasProducts" text-right>Total: &euro;{{total}}</ion-item>
+</ion-list>
+
+<button ion-button block (click)="onClick($event)"
+  [attr.disabled]="!hasProducts ? true : null">
+  Checkout
+</button>
