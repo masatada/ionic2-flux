@@ -1,0 +1,24 @@
+<ion-card>
+
+  <img [attr.src]="product.image"/>
+
+  <ion-card-content>
+    <h2 class="card-title">
+      {{product.title}}
+    </h2>
+    <p>
+      &euro;{{product.price}}
+    </p>
+  </ion-card-content>
+
+  <ion-row no-padding>
+    <ion-col text-right>
+      <button ion-button clear small color="danger" icon-left 
+      (click)="onClick()" [attr.disabled]="product.inventory <= 0 ? true : null">
+        <ion-icon name='share-alt'></ion-icon>
+        {{0 < product.inventory ? 'Add to cart' : 'Sold Out'}}
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
