@@ -14,11 +14,12 @@ import { ProductInCart } from '../../interfaces/product';
   templateUrl: 'cart-item.component.html'
 })
 export class CartItemComponent {
-  @Input() products: null | ProductInCart[];
-  @Input() total: string;
-  @Output() checkoutClicked = new EventEmitter<any>();
 
-  private hasProducts: boolean;
+  @Input() public products: null | ProductInCart[];
+  @Input() public total: string;
+  @Output() public checkoutClicked = new EventEmitter<any>();
+
+  public hasProducts: boolean;
 
   /**
    * Creates an instance of CartItemComponent.
@@ -35,7 +36,7 @@ export class CartItemComponent {
    * 
    * @memberOf CartItemComponent
    */
-  public ngOnChanges() {
+  public ngOnChanges(changes) {
     if (!this.products) {
       return;
     }

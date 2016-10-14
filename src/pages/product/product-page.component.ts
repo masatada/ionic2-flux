@@ -17,11 +17,11 @@ export class ProductPageComponent {
   /**
    * 
    * 
-   * @private
+   * @public
    * @type {Product[]}
    * @memberOf ProductPageComponent
    */
-  private products: Product[];
+  public products: Product[];
 
   /**
    * Creates an instance of ProductPageComponent.

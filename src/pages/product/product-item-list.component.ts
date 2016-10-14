@@ -13,5 +13,5 @@ import { Product } from '../../interfaces/product';
   templateUrl: 'product-item-list.component.html'
 })
 export class ProductItemListComponent {
-  @Input() products: null | Product[];
+  @Input() public products: null | Product[];
 }

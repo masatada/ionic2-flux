@@ -24,16 +24,16 @@ export class CartPageComponent {
    * @type {ProductInCart[]}
    * @memberOf CartContainerComponent
    */
-  private products: ProductInCart[];
+  public products: ProductInCart[];
 
   /**
    * カートに入ってる商品の総数
    * 
-   * @private
+   * @public
    * @type {string}
    * @memberOf CartContainerComponent
    */
-  private total: string;
+  public total: string;
 
   /**
    * Creates an instance of CartContainerComponent.

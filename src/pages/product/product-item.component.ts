@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ToastController } from 'ionic-angular';
 
-import { Product } from '../../interfaces/product';
+import { ProductInStock } from '../../interfaces/product';
 
 /**
  * 商品1アイテムのコンポーネント
@@ -14,8 +14,8 @@ import { Product } from '../../interfaces/product';
   templateUrl: 'product-item.component.html'
 })
 export class ProductItemComponent {
-  @Input() product: null | Product;
-  @Output() addToCartClicked = new EventEmitter<void>();
+  @Input() public product: null | ProductInStock;
+  @Output() public addToCartClicked = new EventEmitter<void>();
 
   /**
    * Creates an instance of ProductItemComponent.

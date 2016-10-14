@@ -16,8 +16,8 @@ import { Product } from '../../interfaces/product';
 })
 export class ProductItemContainerComponent {
 
-  @Input() key: number;
-  @Input() product: null | Product;
+  @Input() public key: number;
+  @Input() public product: null | Product;
 
   /**
    * Creates an instance of ProductItemContainerComponent.
